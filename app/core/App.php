@@ -7,11 +7,11 @@ class App {
 		var_dump($url);
 	}
 
-	public function parse_url()
+	public function parseURL()
 	{
 
-		if(isset($ GET['url'])) {
-			$url = $ GET['url'];
+		if(isset($_GET['url'])) {
+			$url = $_GET['url'];
 			return $url;
 		}
 	}
