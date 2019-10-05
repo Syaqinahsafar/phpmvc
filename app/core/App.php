@@ -31,7 +31,8 @@ class App {
 			$this->params = array_values($url);
 		}
 
-
+		// run the controller & method, then send the params if they got it
+		call_user_func_array([$this->controller, $this->method], $this->params);
 
 	}
 
