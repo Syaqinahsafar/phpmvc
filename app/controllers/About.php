@@ -3,10 +3,10 @@
 class About {
 	public function index($name = 'Syaqinah', $status = 'Student', $age = 22)
 	{
-		echo "Hye World, my name is $name, i am a $status. I am $age years old";
+		$this->view('about/index');
 	}
 	public function page()
 	{
-		echo 'About/page';
+		$this->view('about/page');
 	}
 }
