@@ -3,7 +3,7 @@
 class Home {
 	public function index()
 	{
-		echo 'home/index';
+		$this->view('home/index');
 	}
 
 
