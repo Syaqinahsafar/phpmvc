@@ -20,4 +20,13 @@ class Mahasiswa extends Controller {
 		$this->view('mahasiswa/detail', $data);
 		$this->view('templates/footer');
 	}
+
+	public function add()
+	{
+		if( $this->model('Mahasiswa_model')->addMahasiswaData($_POST) > 0 ) {
+			header('Location: ' . BASEURL . '/mahasiswa');
+			exit;
+		}
+
+	}
 }
