@@ -50,12 +50,24 @@
 				<input type="email" class="form-control" id="email" name="email">
 			</div>
 
+			<div class="form-group">
+				<label for="course">Course</label>
+				<select class="form-control" id="course" name="course">
+					<option value="Information Technology">Information Technology</option>
+					<option value="Artificial Intelligence">Artificial Intelligence</option>
+					<option value="Information Management">Information Management</option>
+					<option value="Software Engineering">Software Engineering</option>
+					<option value="Networking">Networking</option>
+					<option value="Data Science">Data Science</option>
+				</select>
+			</div>
+
 			
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Data</button>
+        <button type="submit" class="btn btn-primary">Add Data</button>
 		</form>
       </div>
     </div>
