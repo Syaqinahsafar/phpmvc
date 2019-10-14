@@ -5,13 +5,30 @@
 			<?php Flasher::flash(); ?>
 		</div>
 	</div>
+
+	<div class="row mb-3">
+		<div class="col-lg-6">
+			<button type="button" class="btn btn-primary editDataButton" data-toggle="modal" data-target="#formModal">
+					Add Mahasiswa Data
+			</button>
+		</div>
+	</div>
+
+	<div class="row mb-3">
+		<div class="col-lg-6">
+			<form action="<?= BASEURL; ?>/mahasiswa/search" method="post">
+				<div class="input-group ">
+					<input type="text" class="form-control" placeholder="search mahasiswa..." name="keyword" id='keyword' autocomplete="off" >
+					<div class="input-group-append">
+						<button class="btn btn-dark" type="submit" id="searchButton">Search</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 	
 	<div class="row">
 		<div class="col-lg-6">
-			<button type="button" class="btn btn-primary editDataButton" data-toggle="modal" data-target="#formModal">
-  				Add Mahasiswa Data
-			</button>	
-			<br><br>
 			<h3>Daftar Mahasiswa</h3>
 			<ul class="list-group">
 				  <?php  foreach ($data['mhs'] as $mhs ) : ?>
