@@ -8,7 +8,7 @@
 	
 	<div class="row">
 		<div class="col-lg-6">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+			<button type="button" class="btn btn-primary editDataButton" data-toggle="modal" data-target="#formModal">
   				Add Mahasiswa Data
 			</button>	
 			<br><br>
@@ -18,6 +18,7 @@
 				  <li class="list-group-item">
 				  	<?= $mhs['name']; ?>
 					 <a href="<?= BASEURL; ?>/mahasiswa/delete/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('are you sure?');">delete</a> 
+					 <a href="<?= BASEURL; ?>/mahasiswa/edit/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id']; ?>">edit</a>
 					 <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-dark float-right ml-1">detail</a>
 				  		
 				  </li>
@@ -30,11 +31,11 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle">Add Mahasiswa Data</h5>
+        <h5 class="modal-title" id="modalTitleLabel">Add Mahasiswa Data</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -42,6 +43,7 @@
       <div class="modal-body">
 
 		<form action="<?= BASEURL; ?>/mahasiswa/add" method="post">
+			<input type="hidden" name="id" id="id">
 			<div class="form-group">
 				<label for="name">Name</label>
 				<input type="text" class="form-control" id="name" name="name">
